@@ -1,4 +1,4 @@
-project('cimgui', 'c', 'cpp')
+project('cimgui', 'c', 'cpp', version : '1.87')
 
 cimgui_imgui_dep = dependency('imgui')
 cimgui_imgui_demo_dep = dependency('imguidemo')
@@ -16,6 +16,7 @@ pkg.generate(cimgui_lib,
     filebase : 'cimgui',
     name : 'cimgui',
     libraries : cimgui_lib,
+    version : meson.project_version(),
     description : 'Dear ImGui C API interface library',
     url : 'http://github.com/cimgui/cimgui',
 )
